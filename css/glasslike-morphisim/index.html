@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      min-height: 100vh;
+      background: radial-gradient(#2D2B7A, #1C0F35);
+      background-image: url(background.png);
+      background-size: cover;
+      font-family: Poppins;
+      color: white;
+      display: grid;
+      place-content: center;
+      text-align: center;
+    }
+
+    .glass-container {
+      padding: 20px;
+      height: 500px;
+      width: 400px;
+      border-radius: 14px;
+
+      /*Most important is adding the blur and having the background be transparent*/
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+
+      border: 1px solid #e2b1ffc4;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="glass-container">
+    <h1>Glassmorphism</h1>
+  </div>
+</body>
+
+</html>
