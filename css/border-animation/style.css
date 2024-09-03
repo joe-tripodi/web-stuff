@@ -1,0 +1,84 @@
+body {
+  background: #121212;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gradient-text {
+  background-image: linear-gradient(to left, #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  background-clip: text;
+  opacity: 0.9;
+  color: transparent;
+}
+
+.basic-shape {
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  border: none;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  background-color: #2F3347;
+  border-radius: 20px;
+  position: relative;
+}
+
+/*
+* This makes is so the angle variable can be animated
+* Normally it is not
+* */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.basic-shape::after,
+.basic-shape::before {
+  content: '';
+
+  /*Positioning it center*/
+  /*Must set the parent to have position relative*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  /*
+  Making it 100% height and width allows us to add padding to determine the
+  thickness of the border
+  */
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+
+  /*Set the border radius for style purposes*/
+  border-radius: 20px;
+  /*Set the element to be behind our main element*/
+  z-index: -1;
+
+  /*We use the conic gradient to set our colours and have*/
+  /*We set it to be transparent because we want to hide most of it.*/
+  background-image: conic-gradient(from var(--angle), transparent 70%, #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  animation: 9s snake linear infinite;
+}
+
+/*The animation that changes the from angle in our background image*/
+@keyframes snake {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
+
+/*Add a glow effect*/
+.basic-shape::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
