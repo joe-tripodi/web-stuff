@@ -34,4 +34,11 @@ body {
 
 .bbutton {
   margin-top: auto;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-inline: auto;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: #F7CB46;
+  filter: drop-shadow(2px 3px black);
 }
