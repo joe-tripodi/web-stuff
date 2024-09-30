@@ -1,5 +1,6 @@
 * {
   margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -12,13 +13,13 @@ body {
 
 .container {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-items: center;
 }
 
 .card {
-  width: 150px;
   background-color: #FFFFFF;
+  max-width: 200px;
   border-radius: 12px;
   border: 1px solid black;
   filter: drop-shadow(4px 4px black);
@@ -26,11 +27,11 @@ body {
 
 .card {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   padding: 10px;
   flex-direction: column;
 }
 
 .bbutton {
-  padding: 20px;
+  margin-top: auto;
 }
