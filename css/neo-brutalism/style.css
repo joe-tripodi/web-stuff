@@ -40,5 +40,6 @@ body {
   padding: 10px 20px;
   border: 1px solid black;
   background-color: #F7CB46;
-  filter: drop-shadow(2px 3px black);
+  filter: drop-shadow(3px 3px black);
+  cursor: pointer;
 }
