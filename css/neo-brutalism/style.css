@@ -82,6 +82,7 @@ h1 {
 }
 
 .cardsquare {
+  transition: transform 0.3s ease, filter 0.3s ease;
   background-color: #FFFFFF;
   max-width: 200px;
   border: 1px solid black;
@@ -95,12 +96,23 @@ h1 {
   flex-direction: column;
 }
 
+.cardsquare:hover {
+  transform: translate(4px, 4px);
+  filter: drop-shadow(0px 0px);
+}
+
 .card {
+  transition: transform 0.3s ease, filter 0.3s ease;
   background-color: #FFFFFF;
   max-width: 200px;
   border-radius: 12px;
   border: 1px solid black;
   filter: drop-shadow(4px 4px black);
+}
+
+.card:hover {
+  transform: translate(4px, 4px);
+  filter: drop-shadow(0px 0px);
 }
 
 .card {
