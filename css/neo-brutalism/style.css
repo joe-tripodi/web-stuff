@@ -37,6 +37,7 @@ h1 {
 }
 
 .container-col button {
+  transition: transform 0.1s ease, filter 0.1s ease;
   cursor: pointer;
   border-radius: 999px;
   padding: 0px;
@@ -45,6 +46,11 @@ h1 {
   background-color: white;
   border: 1px solid black;
   filter: drop-shadow(1px 1px black);
+}
+
+.container-col button:active {
+  transform: translate(1px, 1px);
+  filter: drop-shadow(0px 0px);
 }
 
 .container-col-square {
@@ -67,6 +73,12 @@ h1 {
   background-color: white;
   border: 1px solid black;
   filter: drop-shadow(2px 2px black);
+  transition: transform 0.1s ease, filter 0.1s ease;
+}
+
+.container-col-square button:active {
+  transform: translate(2px, 2px);
+  filter: drop-shadow(0px 0px);
 }
 
 .cardsquare {
