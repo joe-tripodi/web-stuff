@@ -59,6 +59,10 @@ body {
   border-radius: 30px;
 }
 
+.md-text {
+  font-size: 0.8em;
+}
+
 .sm-text {
   font-size: 0.7em;
 }
