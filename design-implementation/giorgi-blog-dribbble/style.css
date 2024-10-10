@@ -54,7 +54,7 @@ body {
 }
 
 .tag-list li {
-  border: 1px dashed grey;
+  border: 1px dotted grey;
   padding: 5px 10px;
   border-radius: 30px;
 }
